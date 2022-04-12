@@ -128,7 +128,7 @@ func ConfigureGlobalFlags(o *KctrlOptions, cmd *cobra.Command, flagsFactory cmdc
 }
 
 func AddPackageCommands(o *KctrlOptions, cmd *cobra.Command, flagsFactory cmdcore.FlagsFactory, opts cmdcore.PackageCommandTreeOpts) {
-	cmd.AddCommand(pkgcreate.NewCreateCmd(pkgcreate.NewCreateOptions(o.ui, o.logger, "kapp-a", opts), flagsFactory))
+	cmd.AddCommand(pkgcreate.NewCreateCmd(pkgcreate.NewCreateOptions(o.logger, "kapp-a", opts), flagsFactory))
 }
 
 func AttachGlobalFlags(o *KctrlOptions, cmd *cobra.Command, flagsFactory cmdcore.FlagsFactory, opts cmdcore.PackageCommandTreeOpts) {
